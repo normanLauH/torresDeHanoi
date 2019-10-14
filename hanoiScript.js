@@ -1,6 +1,6 @@
 let temp = null;
 let movs = 0;
-const winTower = [ 4, 3, 2, 1 ];
+const win = 4;
 
 /*function show() {
     console.log('Torre 1: ' + tower1.data);
@@ -38,7 +38,7 @@ class Tower {
             movs ++;
             document.getElementById('movs').innerHTML = 'Movs: ' + movs;
             document.getElementById('textarea').innerHTML = null;
-            if(tower3.data == winTower) document.getElementById('textarea').innerHTML = 'GANASTE!!!';
+            if(tower3.data.length == win) document.getElementById('textarea').innerHTML = 'GANASTE!!!';
         }else{
             document.getElementById('textarea').innerHTML = 'No se puede colocar ahí \nPieza: ' + temp;
         }
