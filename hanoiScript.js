@@ -1,6 +1,6 @@
 let temp = null;
 let movs = 0;
-const winTower = [ 3, 2, 1 ];
+const winTower = [ 4, 3, 2, 1 ];
 
 /*function show() {
     console.log('Torre 1: ' + tower1.data);
@@ -63,6 +63,6 @@ class Tower {
     }
 }
 
-let tower1 = new Tower('tower1', [ 3, 2, 1 ]);
+let tower1 = new Tower('tower1', [ 4, 3, 2, 1 ]);
 let tower2 = new Tower('tower2', []);
 let tower3 = new Tower('tower3', []);
