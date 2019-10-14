@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="./hanoiScript.js"></script>
+    <title>Torres de Hanoi</title>
+</head>
+<body>
+    <h1>Torres de Hanoi</h1>
+    <br>
+    <br>
+    <div>
+        <p id='tower1' class="tower1"></p>
+        <script>tower1.update();</script>
+        <input type="button" onclick="tower1.action();">
+        <br>
+    </div>
+    <div>
+        <p id='tower2' class="tower2"></p>
+        <script>tower2.update();</script>
+        <input type="button" onclick="tower2.action();">
+        <br>
+    </div>
+    <div>
+        <p id='tower3' class="tower3"></p>
+        <script>tower3.update();</script>
+        <input type="button" onclick="tower3.action();">
+        <br>
+    </div>
+    <br>
+    <br>
+    <textarea rows="3" cols="40" readonly id="textarea"></textarea>
+</body>
+</html>
