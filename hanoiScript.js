@@ -1,5 +1,6 @@
 let temp = null;
 let movs = 0;
+const winTower = [ 3, 2, 1 ];
 
 /*function show() {
     console.log('Torre 1: ' + tower1.data);
@@ -18,6 +19,8 @@ class Tower {
     pop(){
         if(temp === null){
             temp = this.data.pop();
+            document.getElementById(this.id).innerHTML = this.data;
+            document.getElementById('textarea').innerHTML = 'Pieza: ' + temp;
         }/*else{
             document.getElementById('textarea').innerHTML = 'Ya hay una pieza afuera \n Pieza: ' + temp;
         }*/
@@ -30,8 +33,12 @@ class Tower {
     push(){
         if((this.peek() == undefined || this.peek() > temp) && temp != null){
             this.data.push(temp);
+            document.getElementById(this.id).innerHTML = this.data;
             temp = null;
+            movs ++;
+            document.getElementById('movs').innerHTML = 'Movs: ' + movs;
             document.getElementById('textarea').innerHTML = null;
+            if(tower3.data == winTower) document.getElementById('textarea').innerHTML = 'GANASTE!!!';
         }else{
             document.getElementById('textarea').innerHTML = 'No se puede colocar ahí \nPieza: ' + temp;
         }
@@ -50,11 +57,8 @@ class Tower {
     action(){
         if(temp == null){
             this.pop();
-            document.getElementById(this.id).innerHTML = this.data;
-            document.getElementById('textarea').innerHTML = 'Pieza: ' + temp;
         }else{
             this.push();
-            document.getElementById(this.id).innerHTML = this.data;
         }
     }
 }
